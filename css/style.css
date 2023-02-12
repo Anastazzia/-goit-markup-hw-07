@@ -1,3 +1,5 @@
+/*
+
 :root {
     --primary-text-color: rgb(0, 0, 0);
     --text-color: #757575;
@@ -118,11 +120,15 @@ body {
     text-decoration: none;
     font-weight: 700;
     display: flex;
-    margin-right: 93px;
+    
+
+
+}
+
+.header__logo{
+margin-right: 93px;
     padding-top: 24px;
     padding-bottom: 24px;
-
-
 }
 
 .logo__accent {
@@ -169,7 +175,7 @@ body {
 
 }
 
-.link.current::after {
+.nav__link--link.nav__link--current::after {
     position: absolute;
     content: "";
     display: block;
@@ -193,7 +199,7 @@ body {
     color: var(--accent-color);
 }
 
-.nav .link.current {
+.nav .nav__link--link.nav__link--current {
     color: var(--accent-color);
 
 }
@@ -431,7 +437,7 @@ body {
     position: relative;
 }
 
-.works__text-on {
+.works__text-box {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -460,6 +466,13 @@ body {
     letter-spacing: 0.03em;
     line-height: 1.71;
 }
+
+
+/**
+  |============================
+  | WOOORKRKKRKKRR
+  |============================
+*/
 
 
 .works__title {
@@ -491,34 +504,38 @@ body {
     background-color: var(--team-bg);
 }
 
-.team-box {
+/*team-box*/
+.team {
     display: flex;
 }
 
-.team-li:not(:last-child) {
+/*team-li*/
+
+.team__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.team-text-div {
+.team-personality__text {
     padding-top: 30px;
     padding-bottom: 0px;
 }
 
-.section-title-team {
+.team-personality__title {
     font-size: 16px;
     letter-spacing: 0.03em;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.section-text-team {
+.team-personality__speciality {
     font-size: 16px;
     color: var(--text-portfolio-team);
     letter-spacing: 0.03em;
     letter-spacing: 0.03em;
 }
 
-.section-title-main-team {
+/*section-title-main-team*/
+.team-main-title  {
     font-size: 36px;
     letter-spacing: 0.06em;
     line-height: 1.16;
@@ -526,25 +543,25 @@ body {
     margin-bottom: 50px;
 }
 
-.li-icons-team:not(:last-child) {
+.socials__icons:not(:last-child) {
     margin-right: 10px;
 }
 
-.team-li {
+.team__item {
     background-color: #FFFFFF;
     text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-.item-box {
+.socials {
     display: flex;
     justify-content: center;
     padding-top: 16px;
     padding-bottom: 30px;
 }
 
-.link-icon-team {
+.socials__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -557,8 +574,8 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-icon-team:hover,
-.link-icon-team:focus {
+.socials__link:hover,
+.socials__link:focus {
     background-color: var(--accent-color);
     color: var(--team-bg);
 }
@@ -572,117 +589,18 @@ body {
     fill: currentColor
 }
 
-.link-icon-team:not(:last-child) {
+.socials__link:not(:last-child) {
     margin-right: 10px;
 }
 
 
-
-/*
-.section-team {
-    background-color: var(--team-bg);
-}
-
-
-.team__main-title {
-    font-size: 36px;
-    letter-spacing: 0.06em;
-    line-height: 1.16;
-    text-align: center;
-    margin-bottom: 50px;
-
-}
-
-
-.team {
-    display: flex;
-
-}
-
-.team__item {
-    background-color: #FFFFFF;
-    text-align: center;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-
-
-}
-
-.team__item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.team__information {
-    padding-top: 30px;
-    padding-bottom: 0px;
-}
-
-.team__name {
-    font-size: 16px;
-    letter-spacing: 0.03em;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.team__spesiality {
-    font-size: 16px;
-    color: var(--text-portfolio-team);
-    letter-spacing: 0.03em;
-    letter-spacing: 0.03em;
-
-}
-
-
-
-.social-networks__item:not(:last-child) {
-    margin-right: 10px;
-}
-
-
-.social-networks {
-    display: flex;
-    justify-content: center;
-    padding-top: 16px;
-    padding-bottom: 30px;
-}
-
-.social-networks__link {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    color: var(--fill-team-icons);
-
-    transition-property: background-color, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-networks__link:hover,
-.social-networks__link:focus {
-    background-color: var(--accent-color);
-    color: var(--team-bg);
-
-}
-
-
-.social-networks__icon:hover,
-.social-networks__icon:focus {
-    fill: var(--team-bg);
-}
-
-.social-networks__icon {
-    fill: currentColor
-}
-
-.social-networks__link:not(:last-child) {
-    margin-right: 10px;
-}
+/**
+  |============================
+  | PARTNEEERRRRSSS
+  |============================
 */
 
-.partners {
+.clients {
     display: flex;
     justify-content: center;
     width: 1170px;
@@ -691,7 +609,7 @@ body {
 
 }
 
-.section-title-main-partners {
+.clients-main-title {
     font-size: 36px;
     letter-spacing: 0.06em;
     line-height: 1.16;
@@ -700,7 +618,7 @@ body {
 }
 
 
-.partners__li-partners {
+.clients__item {
     width: 170px;
     height: 92px;
 }
@@ -708,7 +626,7 @@ body {
 
 
 
-.partners__a-partners {
+.clients__link {
     display: flex;
     width: 100%;
     height: 100%;
@@ -726,36 +644,27 @@ body {
 
 }
 
-.partners__partners-svg {
+.clients__svg {
     fill: currentColor;
 
 }
 
-.partners__a-partners:hover,
-.partners__a-partners:focus {
+.clients__link:hover,
+.clients__link:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
-.bg-footer {
+.footer {
     color: var(--primary-bg-color);
     background-color: var(--bg-color);
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
-.logo-footer {
+.footer__logo {
     color: var(--text-footer);
-    font-family: 'Raleway';
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    text-transform: none;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-
-
+    
 }
 
 .site_nav_footer__footer-adress a {
@@ -995,7 +904,7 @@ body {
 
 
 
-.section-button {
+.portfolio-button {
     text-align: center;
 }
 
@@ -1019,7 +928,7 @@ body {
 
 }
 
-.section-button {
+.portfolio-button {
     display: flex;
     justify-content: center;
     min-width: 575px;
@@ -1029,7 +938,7 @@ body {
     margin-left: auto;
 }
 
-.section-button-text {
+.portfolio-button__item {
 
     background-color: var(--button-portfolio);
     border-radius: 4px;
@@ -1039,8 +948,8 @@ body {
 
 
 
-.section-button-text :hover,
-.section-button-text :focus {
+.portfolio-button__item :hover,
+.portfolio-button__item :focus {
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1147,7 +1056,7 @@ body {
 }
 
 
-.modal-form-label{
+.modal-form__label{
     display: block;
     margin-bottom: 4px;
     font-size: 12px;
@@ -1159,14 +1068,14 @@ body {
 
 }
 
-.modal-form-group{
+.modal-form__group{
     position: relative;
     margin-bottom: 10px;
     
 
 }
 
-.modal-form-field{
+.modal-form__field{
     display: block;
     width: 100%;
     height: 40px;
@@ -1179,11 +1088,11 @@ body {
     transition: 250ms;
 }
 
-.modal-form-field:focus{
+.modal-form__field:focus{
     border-color: var(--accent-color);
 }
 
-.modal-form-icon{
+.modal-form__icon{
     position: absolute;
 
     width: 18px;
@@ -1196,7 +1105,7 @@ body {
     
 }
 
-.modal-form-field:focus +.modal-form-icon{
+.modal-form__field:focus +.modal-form__icon{
     fill: var(--accent-color);
     
 }
@@ -1228,7 +1137,7 @@ checkbox*/
 
 
 
-.modal-form-label-checkbox{
+.modal-form__label-checkbox{
     display: flex;
     
     
@@ -1297,7 +1206,15 @@ checkbox*/
 }
 
 
-.portfolio-cont {
+
+
+/**
+  |============================
+  | PORTFOLIO
+  |============================
+*/
+
+.portfolio {
 
     display: flex;
     flex-wrap: wrap;
@@ -1306,7 +1223,7 @@ checkbox*/
 }
 
 
-.decoration-portfolio {
+.portfolio__link {
     display: block;
 
     transition-property: box-shadow;
@@ -1316,25 +1233,25 @@ checkbox*/
 
 }
 
-.decoration-portfolio:hover,
-.decoration-portfolio:focus {
+.portfolio__link:hover,
+.portfolio__link:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
-.before-text-portfolio {
+.portfolio__before-text-portfolio {
     position: relative;
 
 }
 
 
-.before-text-portfolio {
+.portfolio__before-text-portfolio {
     overflow: hidden;
 
 }
 
 
-.text-hover-portfolio {
+.portfolio__text-hover-portfolio {
     display: flex;
     align-items: center;
     position: absolute;
@@ -1352,12 +1269,12 @@ checkbox*/
 
 }
 
-.decoration-portfolio:hover .text-hover-portfolio {
+.portfolio__link:hover .portfolio__text-hover-portfolio {
     transform: translateY(0);
     overflow: visible;
 }
 
-.decoration-portfolio:focus .text-hover-portfolio {
+.portfolio__link:focus .portfolio__text-hover-portfolio {
     transform: translateY(0);
     overflow: visible;
 }
@@ -1369,7 +1286,7 @@ checkbox*/
 }*/
 
 
-.p-text-hover-portfolio {
+.portfolio__p-text-hover-portfolio {
     font-size: 18px;
     letter-spacing: 0.03em;
     line-height: calc(28 / 18);
@@ -1381,7 +1298,7 @@ checkbox*/
 }
 
 
-.section-title-portfolio {
+.portfolio__section-title-portfolio {
     font-size: 18px;
     color: var(--primary-text-color);
     letter-spacing: 0.06em;
@@ -1389,7 +1306,7 @@ checkbox*/
     margin-bottom: 4px;
 }
 
-.section-text-portfolio {
+.portfolio__text {
     font-size: 16px;
     color: var(--text-portfolio-team);
     letter-spacing: 0.03em;
@@ -1397,11 +1314,11 @@ checkbox*/
 
 }
 
-.decoration-portfolio {
+.portfolio__link {
     text-decoration: none;
 }
 
-.text-portfolio-box {
+.portfolio__text-portfolio-box {
 
     padding: 20px 24px 20px 24px;
     border-left: 1px solid #EEEEEE;
@@ -1412,4 +1329,4 @@ checkbox*/
 }
 
 
-
+*/
