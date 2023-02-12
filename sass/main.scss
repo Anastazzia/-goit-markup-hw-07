@@ -1,17 +1,17 @@
 :root {
-    --primary-text-color: rgb(0, 0, 0);
-    --text-color: #757575;
-    --accent-color: #2196F3;
-    --primary-bg-color: #FFFFFF;
-    --text-footer: #FFFFFF;
-    --bg-color: #2F303A;
-    --bg-button: #188CE8;
-    --team-bg: #F5F4FA;
-    --footer-team-text: rgba(255, 255, 255, 0.6);
-    --text-portfolio-team: rgba(117, 117, 117, 1);
-    --button-portfolio: #F5F4FA;
-    --fill-team-icons: #AFB1B8;
-    --fill-team-icons-hover-focus: #FFFFFF;
+    $primary-text-color: rgb(0, 0, 0);
+    $text-color: #757575;
+    $accent-color: #2196F3;
+    $primary-bg-color: #FFFFFF;
+    $text-footer: #FFFFFF;
+    $bg-color: #2F303A;
+    $bg-button: #188CE8;
+    $team-bg: #F5F4FA;
+    $footer-team-text: rgba(255, 255, 255, 0.6);
+    $text-portfolio-team: rgba(117, 117, 117, 1);
+    $button-portfolio: #F5F4FA;
+    $fill-team-icons: #AFB1B8;
+    $fill-team-icons-hover-focus: #FFFFFF;
 
 
 }
@@ -86,8 +86,8 @@ ul {
 }
 
 body {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -104,8 +104,12 @@ body {
   | HEADER
   |============================
 */
+/**
+  |============================
+  | HEADER
+  |============================
+*/
 /*logo*/
-
 .header {
     border: 1px solid #ECECEC;
 }
@@ -113,14 +117,13 @@ body {
 .logo {
     color: var(--primary-text-color);
     font-size: 26px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     letter-spacing: 0.03em;
     text-decoration: none;
     font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-
-
-
 }
 
 .header__logo {
@@ -133,21 +136,14 @@ body {
     color: var(--accent-color);
 }
 
-
-
 .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-
-
 }
 
-
-
-
 /*.site_nav + text*/
-
 .nav a {
-
     display: block;
     color: var(--primary-text-color);
     letter-spacing: 0.02em;
@@ -155,12 +151,13 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-
+    font-family: "Roboto", sans-serif;
+    -webkit-transition-property: color;
     transition-property: color;
+    -webkit-transition-duration: 250ms;
     transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .nav__item {
@@ -170,7 +167,6 @@ body {
 
 .nav__item:not(:first-child) {
     margin-left: 50px;
-
 }
 
 .nav__link--link.nav__link--current::after {
@@ -185,11 +181,10 @@ body {
     background-color: var(--accent-color);
 }
 
-
-
 .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-
 }
 
 .nav :hover,
@@ -199,33 +194,25 @@ body {
 
 .nav .nav__link--link.nav__link--current {
     color: var(--accent-color);
-
 }
-
-
 
 .nav__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
 }
 
-
-
 /*auth_nav*/
-
-
-
-
-
 .auth_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: auto;
-
 }
 
 .auth_nav__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: var(--text-color);
     font-size: 14px;
@@ -233,20 +220,22 @@ body {
     line-height: 1.14;
     text-decoration: none;
     font-weight: 500;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-
-
 }
 
 .auth_nav__link {
+    -webkit-transition-property: color;
     transition-property: color;
+    -webkit-transition-duration: 250ms;
     transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth_nav-title {
     margin-left: 50px;
-
 }
 
 .auth_nav__link:hover,
@@ -265,22 +254,12 @@ body {
 }
 
 .auth_nav__icon {
-    fill: var(--fill-team-icons);
+    
     margin-right: 10px;
 }
 
-.section-hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
 
-    color: var(--primary-bg-color);
-    background-color: var(--bg-color);
-    letter-spacing: 0.06em;
-    text-align: center;
 
-    background-image: url(../images/hero-bg.jpg);
-
-}
 
 /**
   |============================
@@ -288,7 +267,18 @@ body {
   |============================
 */
 
+.section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
 
+    color: $primary-bg-color;
+    background-color: $bg-color;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    background-image: url(../images/hero-bg.jpg);
+
+}
 .bg-img-hero {
     width: 1600px;
     height: 600px;
@@ -326,8 +316,8 @@ body {
     letter-spacing: 0.06em;
     line-height: 30px;
     font-weight: 700;
-    color: var(--primary-bg-color);
-    background-color: var(--accent-color);
+    color: $primary-bg-color;
+    background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 10px 32px 10px 32px;
     border-radius: 4px;
@@ -341,8 +331,8 @@ body {
 
 .hero__button:hover,
 .hero__button:focus {
-    color: var(--primary-bg-color);
-    background-color: var(--bg-button);
+    color: $primary-bg-color;
+    background-color: $bg-button;
 
 }
 
@@ -368,7 +358,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    background-color: var(--team-bg);
+    background-color: $team-bg;
     background-image: url(../images/decorations/antenna.svg);
     background-repeat: no-repeat;
     background-position: center
@@ -380,7 +370,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    background-color: var(--team-bg);
+    background-color: $team-bg;
     background-image: url(../images/decorations/clock.svg);
     background-repeat: no-repeat;
     background-position: center
@@ -392,7 +382,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    background-color: var(--team-bg);
+    background-color: $team-bg;
     background-image: url(../images/decorations/diagram.svg);
     background-repeat: no-repeat;
     background-position: center
@@ -404,7 +394,7 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    background-color: var(--team-bg);
+    background-color: $team-bg;
     background-image: url(../images/decorations/astronaut.svg);
     background-repeat: no-repeat;
     background-position: center
@@ -423,7 +413,7 @@ body {
 }
 
 .advantages__title {
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.14;
@@ -445,7 +435,7 @@ body {
 
     background-color: rgba(47, 48, 58, 0.8);
     ;
-    color: var(--primary-bg-color);
+    color: $primary-bg-color;
 
 
 }
@@ -459,7 +449,7 @@ body {
 }
 
 .advantages__text {
-    color: var(--text-color);
+    color: $text-color;
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.71;
@@ -499,7 +489,7 @@ body {
 
 
 .section-team {
-    background-color: var(--team-bg);
+    background-color: $team-bg$team-bg;
 }
 
 /*team-box*/
@@ -527,7 +517,7 @@ body {
 
 .team-personality__speciality {
     font-size: 16px;
-    color: var(--text-portfolio-team);
+    color: $text-portfolio-team;
     letter-spacing: 0.03em;
     letter-spacing: 0.03em;
 }
@@ -566,7 +556,7 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    color: var(--fill-team-icons);
+    color: $fill-team-icons;
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -574,13 +564,13 @@ body {
 
 .socials__link:hover,
 .socials__link:focus {
-    background-color: var(--accent-color);
-    color: var(--team-bg);
+    background-color: $accent-color;
+    color: $team-bg;
 }
 
 .icon:hover,
 .icon:focus {
-    fill: var(--team-bg);
+    fill: $team-bg;
 }
 
 .icon {
@@ -628,8 +618,8 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    color: var(--fill-team-icons);
-    border: 1px solid var(--fill-team-icons);
+    color: $fill-team-icons;
+    border: 1px solid $fill-team-icons;
     border-radius: 4px;
     align-items: center;
     justify-content: center;
@@ -649,24 +639,24 @@ body {
 
 .clients__link:hover,
 .clients__link:focus {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    color: $accent-color;
+    border-color: $accent-color;
 }
 
 .footer {
-    color: var(--primary-bg-color);
-    background-color: var(--bg-color);
+    color: $primary-bg-color;
+    background-color: $bg-color;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
 .footer__logo {
-    color: var(--text-footer);
+    color: $text-footer;
 
 }
 
 .site_nav_footer__footer-adress a {
-    color: var(--text-footer);
+    color: $text-footer;
     font-size: 14px;
     font-style: normal;
     line-height: 1.71;
@@ -685,7 +675,7 @@ body {
 }
 
 .site_nav_footer__footer-adress-contact a {
-    color: var(--footer-team-text);
+    color: $footer-team-text;
     font-size: 14px;
     font-style: normal;
     letter-spacing: 0.03em;
@@ -699,7 +689,7 @@ body {
 }
 
 .site_nav_footer__footer-adress-contact-mail a {
-    color: var(--footer-team-text);
+    color: $footer-team-text;
     font-size: 14px;
     font-style: normal;
     letter-spacing: 0.03em;
@@ -738,7 +728,7 @@ body {
 
 .site_nav_footer :hover,
 .site_nav_footer :focus {
-    color: var(--accent-color);
+    color: $accent-color;
 
 }
 
@@ -771,7 +761,7 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    color: var(--primary-bg-color);
+    color: $primary-bg-color;
     background-color: rgba(255, 255, 255, 0.1);
     transition-property: background-color, color;
     transition-duration: 250ms;
@@ -780,8 +770,8 @@ body {
 
 .footer-icon-box__link:hover,
 .footer-icon-box__link:focus {
-    background-color: var(--accent-color);
-    color: var(--team-bg);
+    background-color: $accent-color;
+    color: $team-bg;
 }
 
 .footer-icon-box__input:not(:last-child) {
@@ -790,7 +780,7 @@ body {
 
 .icon:hover,
 .icon:focus {
-    fill: var(--team-bg);
+    fill: $team-bg;
 }
 
 .icon {
@@ -840,7 +830,7 @@ body {
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     font-weight: 700;
-    color: var(--primary-bg-color);
+    color: $primary-bg-color;
 }
 
 .email-mailing {
@@ -850,7 +840,7 @@ body {
 
     border: 1px solid rgba(255, 255, 255, 0.3);
 
-    background-color: var(--bg-color);
+    background-color: $bg-color;
     border-radius: 4px;
 
     transition-duration: 250ms;
@@ -868,8 +858,8 @@ body {
 
     padding: 10px 28px;
     border-radius: 4px;
-    background-color: var(--accent-color);
-    color: var(--primary-bg-color);
+    background-color: $accent-color;
+    color: $primary-bg-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     font-weight: 700;
@@ -885,8 +875,8 @@ body {
 
 .btn:hover,
 .btn:focus {
-    background-color: var(--bg-button);
-    color: var(--primary-bg-color);
+    background-color: $bg-button;
+    color: $primary-bg-color;
 
 }
 
@@ -937,7 +927,7 @@ body {
 
 .portfolio-button__item {
 
-    background-color: var(--button-portfolio);
+    background-color: $button-portfolio;
     border-radius: 4px;
     margin-left: 8px;
 
@@ -947,8 +937,8 @@ body {
 
 .portfolio-button__item :hover,
 .portfolio-button__item :focus {
-    color: var(--primary-bg-color);
-    background-color: var(--accent-color);
+    color: $primary-bg-color;
+    background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -983,7 +973,7 @@ body {
 
     width: 528px;
 
-    background-color: var(--primary-bg-color);
+    background-color: $primary-bg-color;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
@@ -1019,11 +1009,11 @@ body {
 
 .modal__modal-btn:hover .modal__modal-icon,
 .modal__modal-btn:focus .modal__modal-icon {
-    fill: var(--accent-color);
+    fill: $accent-color;
 }
 
 .modal__modal-icon {
-    fill: var(--text-color);
+    fill: $text-color;
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1057,7 +1047,7 @@ body {
     letter-spacing: 0.01em;
     line-height: calc(14 / 12);
 
-    color: var(--text-color);
+    color: $text-color;
     margin-bottom: 4px;
 
 }
@@ -1083,7 +1073,7 @@ body {
 }
 
 .modal-form__field:focus {
-    border-color: var(--accent-color);
+    border-color: $accent-color;
 }
 
 .modal-form__icon {
@@ -1100,7 +1090,7 @@ body {
 }
 
 .modal-form__field:focus+.modal-form__icon {
-    fill: var(--accent-color);
+    fill: $accent-color;
 
 }
 
@@ -1124,7 +1114,7 @@ body {
 
 
 .modal-texteria:focus {
-    border-color: var(--accent-color);
+    border-color: $accent-color;
 }
 
 /*
@@ -1147,7 +1137,7 @@ checkbox*/
 }
 
 .checkbox-link {
-    color: var(--accent-color);
+    color: $accent-color;
     text-decoration: underline;
 }
 
@@ -1164,13 +1154,13 @@ checkbox*/
 }
 
 .checkbox-text {
-    color: var(--text-color);
+    color: $text-color;
     margin-right: 5px;
 }
 
 .checkbox-form:checked {
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
+    border-color: $accent-color;
+    background-color: $accent-color;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'%3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E");
 }
 
@@ -1179,8 +1169,8 @@ checkbox*/
     width: 200px;
     height: 50px;
 
-    background-color: var(--accent-color);
-    color: var(--primary-bg-color);
+    background-color: $accent-color;
+    color: $primary-bg-color;
     font-weight: 700;
     padding: 10px 52px;
     border-radius: 4px;
@@ -1195,8 +1185,8 @@ checkbox*/
 
 .checkbox-btn:hover,
 .checkbox-btn:focus {
-    background-color: var(--bg-button);
-    color: var(--primary-bg-color);
+    background-color: $bg-button;
+    color: $primary-bg-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -1277,7 +1267,7 @@ checkbox*/
 /*
 .decoration-portfoli:hover .text-hover-portfolio:hover{
     opacity: 1;
-    color: var(--team-bg);
+    color: $team-bg$team-bg;
 }*/
 
 
@@ -1285,7 +1275,7 @@ checkbox*/
     font-size: 18px;
     letter-spacing: 0.03em;
     line-height: calc(28 / 18);
-    color: var(--primary-bg-color);
+    color: $primary-bg-color;
 
 
 
@@ -1295,7 +1285,7 @@ checkbox*/
 
 .portfolio__section-title-portfolio {
     font-size: 18px;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     letter-spacing: 0.06em;
     line-height: 2;
     margin-bottom: 4px;
@@ -1303,7 +1293,7 @@ checkbox*/
 
 .portfolio__text {
     font-size: 16px;
-    color: var(--text-portfolio-team);
+    color: $text-portfolio-team;
     letter-spacing: 0.03em;
     line-height: 1.87;
 

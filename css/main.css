@@ -246,9 +246,10 @@ body {
 }
 
 .auth_nav__icon {
-  fill: var(--fill-team-icons);
   margin-right: 10px;
 }
+
+
 
 .section-hero {
   padding-top: 200px;
@@ -425,11 +426,7 @@ body {
   line-height: 1.71;
 }
 
-/**
-  |============================
-  | WOOORKRKKRKKRR
-  |============================
-*/
+
 .works__title {
   font-size: 36px;
   letter-spacing: 0.06em;
